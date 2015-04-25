@@ -24,4 +24,10 @@
     <%= geo_chart @visits.group(:country).count %>
   </div>
 
+<!-- area chart --> 
+  <div class="col-xs-12">
+    <h3>Total Load Time By Day</h3>
+    <%= area_chart @visits.group_by_day(:visited_at).maximum(:load_time) %>
+  </div>
+
 </div>
