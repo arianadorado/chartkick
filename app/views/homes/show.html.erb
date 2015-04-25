@@ -30,4 +30,23 @@
     <%= area_chart @visits.group_by_day(:visited_at).maximum(:load_time) %>
   </div>
 
+  <!-- Column Chart --> 
+  <div class="col-xs-6">
+    <h3>Total Visits Per Country</h3>
+    <%= column_chart @visits.group(:country).count %>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 </div>
